@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "core",
-    "django_celery_results"
+    "django_celery_results",
 ]
 
 MIDDLEWARE = [
@@ -136,5 +136,9 @@ CACHES = {
         'LOCATION': 'my_cache_table',
     }
 }
+
+CELERY_IMPORTS = [
+    'celery_demo.tasks',
+]
 
 CELERY_RESULT_EXTENDED = True

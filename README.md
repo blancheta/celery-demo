@@ -34,3 +34,9 @@ To run the feeders
 python feeder1.py
 python feeder2.py
 ```
+
+Run Celery beat with one task every 10 seconds
+
+```
+celery -A celery_demo beat -l debug
+```

@@ -15,3 +15,11 @@ app.config_from_object('django.conf:settings', namespace='CELERY')
 
 # Load task modules from all registered Django apps.
 app.autodiscover_tasks()
+
+app.conf.beat_schedule = {
+    'do-something-periodically': {
+        'task': 'celery_demo.tasks.scheduled_task',
+        'schedule': 10,
+        'args': ("Hello",),
+    },
+}
