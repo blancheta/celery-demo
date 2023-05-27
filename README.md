@@ -36,7 +36,7 @@ python feeder2.py
 ```
 
 Run Celery beat with one task every 10 seconds
-
+[https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html#crontab-schedules](https://docs.celeryq.dev/en/stable/userguide/periodic-tasks.html#crontab-schedules)
 ```
 celery -A celery_demo beat -l debug
 ```
